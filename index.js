@@ -74,3 +74,6 @@ function hashbow(input, saturation, lightness) {
   var col = hsl2hex(sum % 255, saturation || 100, lightness || 50);
   return col;
 }
+
+
+console.log(hashbow('asdfsadfasd'));
