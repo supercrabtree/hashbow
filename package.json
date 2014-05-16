@@ -4,7 +4,7 @@
   "description": "Creates colorful hexadecimal hash values from strings / objects / arrays / anythings",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha test/test.js",
     "build": "browserify index.js --standalone Hashbow > build/hashbow.js && browserify index.js --standalone Hashbow | uglifyjs -mc > build/hashbow.min.js"
   },
   "repository": {
