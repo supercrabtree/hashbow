@@ -8,6 +8,10 @@ var person = {
   banana: true
 };
 
+function personFunction() {
+  return person;
+}
+
 describe('Hashbow', function () {
   it('should turn a String into a hex value', function () {
 
@@ -56,6 +60,17 @@ describe('Hashbow', function () {
   it('should turn a Array into a hex value', function () {
 
     var results = hashbow(['face', person, 90210], 100, 50);
+
+    expect(results).to.be.a('string');
+    expect(results.charAt(0)).to.equal('#');
+    expect(results).to.have.length.within(4, 7);
+    expect(results).not.to.have.length(5);
+    expect(results).not.to.have.length(6);
+  });
+
+  it('should turn a Function into a hex value', function () {
+
+    var results = hashbow(personFunction, 100, 50);
 
     expect(results).to.be.a('string');
     expect(results.charAt(0)).to.equal('#');
