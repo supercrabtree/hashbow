@@ -4,7 +4,8 @@
   "description": "Creates colorful hexadecimal hash values from strings / objects / arrays / anythings",
   "main": "hashbow.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify index.js --standalone Hashbow > build/hashbow.js && browserify index.js --standalone Hashbow | uglifyjs -mc > build/hashbow.min.js"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,9 @@
   "bugs": {
     "url": "https://github.com/supercrabtree/hashbow/issues"
   },
-  "homepage": "https://github.com/supercrabtree/hashbow"
+  "homepage": "https://github.com/supercrabtree/hashbow",
+  "devDependencies": {
+    "browserify": "^4.1.3",
+    "uglify-js": "^2.4.13"
+  }
 }
