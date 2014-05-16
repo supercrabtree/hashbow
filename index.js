@@ -76,4 +76,4 @@ function hashbow(input, saturation, lightness) {
 }
 
 
-console.log(hashbow('asdfsadfasd'));
+console.log(hashbow('face'));
