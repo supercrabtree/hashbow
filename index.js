@@ -66,14 +66,14 @@ function hsl2hex(h, s, l) {
 
 function hashbow(input, saturation, lightness) {
 
+  var toColor = JSON.stringify(input);
+
   var sum = 0;
-  input.split('').forEach(function (letter) {
+  toColor.split('').forEach(function (letter) {
     sum += letter.charCodeAt(0);
   });
 
   var col = hsl2hex(sum % 255, saturation || 100, lightness || 50);
+  console.log(col);
   return col;
 }
-
-
-console.log(hashbow('face'));
