@@ -6,7 +6,7 @@
     "George Crabtree <supercrabtree@googlemail.com>"
   ],
   "description": "Creates colorful hexadecimal hash values from strings / objects / arrays / anythings",
-  "main": "hashbow.js",
+  "main": "build/hashbow.js",
   "moduleType": [
     "amd",
     "es6",
