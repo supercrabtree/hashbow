@@ -9,13 +9,16 @@
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
 </head>
 <body ng-controller="MainCtrl">
-    <header></header>
-<!--     <h1>hashbow</h1>
-    <input type="text" value="helmet" ng-model="value">
-    <p>{{value}}</p> -->
+    <header>
+      <h1>hashbow</h1>
+    </header>
+    <div class="clouds">
+      <div class="cloud" ng-repeat="i in [1,2,3,4,5,6,7,8,9]"></div>
+    </div>
+    <!-- <input type="text" value="helmet" ng-model="value"> -->
+    <!-- <p>{{value}}</p> -->
 </body>
 <script>
-
   angular.module('hashbow', [])
     .controller('MainCtrl', function ($scope) {
       $scope.value = 'Banana';

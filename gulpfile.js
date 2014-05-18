@@ -16,18 +16,17 @@ gulp.task('startServers', function (cb) {
   app.use(express.static(__dirname));
   app.listen(3333);
 
-  lr = require('tiny-lr')()
+  lr = require('tiny-lr')();
   lr.listen(35729);
+  cb();
 });
 
 function notifyLivereload(event) {
-  console.log('asdfsad');
   gulp.src(event.path, {read: false})
     .pipe(require('gulp-livereload')(lr));
 }
 
 gulp.task('default', ['stylus', 'startServers'], function () {
-  gulp.watch([
-    '*.html'
-  ], notifyLivereload);
+  gulp.watch(['*.html', 'style.css'], notifyLivereload);
+  gulp.watch('./src/style.styl', ['stylus']);
 });

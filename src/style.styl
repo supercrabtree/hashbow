@@ -1,24 +1,50 @@
+clouds = {size: 4em,  x: -1em, y: -2em},
+         {size: 15em, x: -1em, y: -13em},
+         {size: 15em, x: 8em, y: -11em},
+         {size: 3em,  x: 20em, y: 0em},
+         {size: 3em,  x: 20em, y: 0em},
+         {size: 3em,  x: 20em, y: 0em},
+         {size: 3em,  x: 20em, y: 0em},
+         {size: 3em,  x: 20em, y: 0em},
+         {size: 3em,  x: 20em, y: 0em}
+
+cloud-gradient = linear-gradient(20deg, whitesmoke 0%, white 100%);
+header-height = 20rem;
+
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   font-size: 10px;
   background-color: #BDD1DE;
 }
-header {
-  background: linear-gradient(20deg, #f5f5f5 0%,#ffffff 100%);
-  height: 20rem;
-}
-header::after {
-  position: absolute;
-  top: 45px;
-  left: 145px;
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  background-color: linear-gradient(200deg, #f5f5f5 0%,#ffffff 100%);
-  z-index: 1;
-  content: '';
-}
 h1 {
+  margin-left: 50%;
+  color: #4180AB;
   font-family: 'Londrina Solid';
-  font-size: 60px;
+  font-size: 8rem;
+}
+
+header {
+  overflow: hidden;
+  background: cloud-gradient;
+  height: header-height;
+}
+.clouds {
+  position: relative;
+  overflow: hidden;
+  height: 100rem;
+}
+for cloud, i in clouds {
+  .cloud:nth-child({i + 1}) {
+    position: absolute;
+    top: cloud.y;
+    left: cloud.x;
+    border-radius: 50%;
+    width: cloud.size;
+    height: cloud.size;
+    background: cloud-gradient;
+  }
 }
