@@ -1,0 +1,26 @@
+{
+  "name": "hashbow",
+  "version": "0.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/supercrabtree/hashbow.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/supercrabtree/hashbow/issues"
+  },
+  "homepage": "https://github.com/supercrabtree/hashbow",
+  "private": true,
+  "devDependencies": {
+    "connect-livereload": "^0.4.0",
+    "express": "^4.2.0",
+    "gulp-livereload": "^1.5.0",
+    "tiny-lr": "0.0.7"
+  }
+}
