@@ -1,43 +1,41 @@
-clouds = {size: 4em,  x: -1em, y: -2em},
-         {size: 15em, x: -1em, y: -13em},
-         {size: 15em, x: 8em,  y: -11em},
-         {size: 6em,  x: 20em, y: -2em},
-         {size: 20em, x: 20em, y: -18em}
-         // {size: 3em,  x: 20em, y: 10em},
-         // {size: 3em,  x: 20em, y: 10em},
-         // {size: 3em,  x: 20em, y: 10em},
-         // {size: 3em,  x: 20em, y: 10em}
+clouds = {size: 4em,  x: -1em,   y: -2em},
+         {size: 15em, x: -1em,   y: -13em},
+         {size: 15em, x: 8em,    y: -11em},
+         {size: 6em,  x: 20.5em, y: -3em}
 
 header-height = 20rem;
 
-* {
+*
   box-sizing: border-box;
-}
 
 html,
-body {
+body
   font-size: 10px;
   background-color: #BDD1DE;
-}
-h1 {
+
+#rainbow
+  position: absolute;
+  top: -1.5em;
+  left: -2em;
+
+h1
   margin-left: 50%;
-  color: #4180AB;
+  color: #6680c2;
   font-family: 'Londrina Solid';
   font-size: 9rem;
-}
 
-header {
+header
   overflow: hidden;
   background: whitesmoke;
   height: header-height;
-}
-.clouds {
+
+.clouds
   position: relative;
   overflow: hidden;
   height: 100rem;
-}
-for cloud, i in clouds {
-  .cloud:nth-child({i + 1}) {
+
+for cloud, i in clouds
+  .cloud:nth-child({i + 1})
     position: absolute;
     top: cloud.y;
     left: cloud.x;
@@ -45,5 +43,3 @@ for cloud, i in clouds {
     width: cloud.size;
     height: cloud.size;
     background: whitesmoke;
-  }
-}

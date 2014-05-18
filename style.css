@@ -6,9 +6,14 @@ body {
   font-size: 10px;
   background-color: #bdd1de;
 }
+#rainbow {
+  position: absolute;
+  top: -1.5em;
+  left: -2em;
+}
 h1 {
   margin-left: 50%;
-  color: #4180ab;
+  color: #6680c2;
   font-family: 'Londrina Solid';
   font-size: 9rem;
 }
@@ -51,19 +56,10 @@ header {
 }
 .cloud:nth-child(4) {
   position: absolute;
-  top: -2em;
-  left: 20em;
+  top: -3em;
+  left: 20.5em;
   border-radius: 50%;
   width: 6em;
   height: 6em;
-  background: #f5f5f5;
-}
-.cloud:nth-child(5) {
-  position: absolute;
-  top: -18em;
-  left: 20em;
-  border-radius: 50%;
-  width: 20em;
-  height: 20em;
   background: #f5f5f5;
 }
