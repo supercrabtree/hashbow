@@ -65,7 +65,6 @@ function hsl2hex(h, s, l) {
 }
 
 function hashbow(input, saturation, lightness) {
-
   var toColor, sum;
 
   if (!!input || input === 0) return hsl2hex(0, saturation || 100, lightness || 50);
@@ -97,6 +96,5 @@ function hashbow(input, saturation, lightness) {
   sum = Math.abs(sum * sum);
 
   var color = hsl2hex(sum % 360, saturation || 100, lightness || 50);
-  // console.log(input, color);
   return color;
 }
