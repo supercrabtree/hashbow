@@ -66,14 +66,37 @@ function hsl2hex(h, s, l) {
 
 function hashbow(input, saturation, lightness) {
 
-  var toColor = JSON.stringify(input);
+  var toColor, sum;
 
-  var sum = 0;
-  toColor.split('').forEach(function (letter) {
-    sum += letter.charCodeAt(0);
-  });
+  if (!!input || input === 0) return hsl2hex(0, saturation || 100, lightness || 50);
 
-  var col = hsl2hex(sum % 255, saturation || 100, lightness || 50);
-  console.log(col);
-  return col;
+  switch (typeof input) {
+    case 'object':
+      toColor = JSON.stringify(input);
+    break;
+    case 'number':
+      sum = input;
+    break;
+    case 'boolean':
+      return hsl2hex(input ? 120 : 0, saturation || 100, lightness || 50);
+    break;
+    case 'function':
+      toColor = input.toString();
+    break;
+    case 'string':
+    default:
+      toColor = input;
+  }
+  if (!sum) {
+    sum = 0;
+    toColor.split('').forEach(function (letter) {
+      sum += letter.charCodeAt(0);
+    });
+  }
+
+  sum = Math.abs(sum * sum);
+
+  var color = hsl2hex(sum % 360, saturation || 100, lightness || 50);
+  // console.log(input, color);
+  return color;
 }

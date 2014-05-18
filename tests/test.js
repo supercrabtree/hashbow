@@ -12,70 +12,44 @@ function personFunction() {
   return person;
 }
 
+function isValidHexColor(thingToTest) {
+  var results = hashbow(thingToTest, 100, 50);
+
+  expect(results).to.be.a('string');
+  expect(results.charAt(0)).to.equal('#');
+  expect(results).to.have.length(7);
+}
+
 describe('Hashbow', function () {
+  it('should turn a Boolean into a hex value', function () {
+    [true, false].forEach(isValidHexColor);
+  });
+
   it('should turn a String into a hex value', function () {
-
-    var results = hashbow('some-kind-of-string', 60, 50);
-
-    expect(results).to.be.a('string');
-    expect(results.charAt(0)).to.equal('#');
-    expect(results).to.have.length.within(4, 7);
-    expect(results).not.to.have.length(5);
-    expect(results).not.to.have.length(6);
+    ['', 'george', 'bananan', '\n\t@##$&*()*(^&*%^&*'].forEach(isValidHexColor);
   });
 
   it('should turn an Object into a hex value', function () {
-
-    var results = hashbow(person, 100, 50);
-
-    expect(results).to.be.a('string');
-    expect(results.charAt(0)).to.equal('#');
-    expect(results).to.have.length.within(4, 7);
-    expect(results).not.to.have.length(5);
-    expect(results).not.to.have.length(6);
+    [person, {}].forEach(isValidHexColor);
   });
 
   it('should turn a Number into a hex value', function () {
-
-    var results = hashbow(400, 100, 50);
-
-    expect(results).to.be.a('string');
-    expect(results.charAt(0)).to.equal('#');
-    expect(results).to.have.length.within(4, 7);
-    expect(results).not.to.have.length(5);
-    expect(results).not.to.have.length(6);
-  });
-
-  it('should turn a Boolean into a hex value', function () {
-
-    var results = hashbow(false, 100, 50);
-
-    expect(results).to.be.a('string');
-    expect(results.charAt(0)).to.equal('#');
-    expect(results).to.have.length.within(4, 7);
-    expect(results).not.to.have.length(5);
-    expect(results).not.to.have.length(6);
+    [Number.MAX_VALUE, -500, 0, 10, 402434].forEach(isValidHexColor);
   });
 
   it('should turn a Array into a hex value', function () {
-
-    var results = hashbow(['face', person, 90210], 100, 50);
-
-    expect(results).to.be.a('string');
-    expect(results.charAt(0)).to.equal('#');
-    expect(results).to.have.length.within(4, 7);
-    expect(results).not.to.have.length(5);
-    expect(results).not.to.have.length(6);
+    [['asdf', person, {}, -2], []].forEach(isValidHexColor);
   });
 
   it('should turn a Function into a hex value', function () {
+    [function () {}, personFunction].forEach(isValidHexColor);
+  });
 
-    var results = hashbow(personFunction, 100, 50);
+  it('should turn null into a hex value', function () {
+    [null].forEach(isValidHexColor);
+  });
 
-    expect(results).to.be.a('string');
-    expect(results.charAt(0)).to.equal('#');
-    expect(results).to.have.length.within(4, 7);
-    expect(results).not.to.have.length(5);
-    expect(results).not.to.have.length(6);
+  it('should turn a RegExp into a hex value', function () {
+    [new RegExp(), new RegExp(/[a]/)].forEach(isValidHexColor);
   });
 });
