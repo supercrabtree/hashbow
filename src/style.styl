@@ -1,14 +1,13 @@
 clouds = {size: 4em,  x: -1em, y: -2em},
          {size: 15em, x: -1em, y: -13em},
-         {size: 15em, x: 8em, y: -11em},
-         {size: 3em,  x: 20em, y: 0em},
-         {size: 3em,  x: 20em, y: 0em},
-         {size: 3em,  x: 20em, y: 0em},
-         {size: 3em,  x: 20em, y: 0em},
-         {size: 3em,  x: 20em, y: 0em},
-         {size: 3em,  x: 20em, y: 0em}
+         {size: 15em, x: 8em,  y: -11em},
+         {size: 6em,  x: 20em, y: -2em},
+         {size: 20em, x: 20em, y: -18em}
+         // {size: 3em,  x: 20em, y: 10em},
+         // {size: 3em,  x: 20em, y: 10em},
+         // {size: 3em,  x: 20em, y: 10em},
+         // {size: 3em,  x: 20em, y: 10em}
 
-cloud-gradient = linear-gradient(20deg, whitesmoke 0%, white 100%);
 header-height = 20rem;
 
 * {
@@ -24,12 +23,12 @@ h1 {
   margin-left: 50%;
   color: #4180AB;
   font-family: 'Londrina Solid';
-  font-size: 8rem;
+  font-size: 9rem;
 }
 
 header {
   overflow: hidden;
-  background: cloud-gradient;
+  background: whitesmoke;
   height: header-height;
 }
 .clouds {
@@ -45,6 +44,6 @@ for cloud, i in clouds {
     border-radius: 50%;
     width: cloud.size;
     height: cloud.size;
-    background: cloud-gradient;
+    background: whitesmoke;
   }
 }
