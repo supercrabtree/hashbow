@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="hashbow">
 <head>
   <meta charset="UTF-8">
   <title>hashbow</title>
@@ -7,7 +7,16 @@
   <link rel="stylesheet" href="style.css">
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
 </head>
-<body>
+<body ng-controller="MainCtrl">
     <h1>hashbow</h1>
+    <input type="text" value="helmet" ng-model="value">
+    <p>{{value}}</p>
 </body>
+<script>
+
+  angular.module('hashbow', [])
+    .controller('MainCtrl', function ($scope) {
+      $scope.value = 'Banana';
+    });
+</script>
 </html>
