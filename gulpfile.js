@@ -27,6 +27,6 @@ function notifyLivereload(event) {
 }
 
 gulp.task('default', ['stylus', 'startServers'], function () {
-  gulp.watch(['*.html', 'style.css'], notifyLivereload);
+  gulp.watch(['*.html', 'style.css', 'img/*'], notifyLivereload);
   gulp.watch('./src/style.styl', ['stylus']);
 });
