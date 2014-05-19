@@ -13,13 +13,19 @@ body
   font-size: 10px;
   background-color: #BDD1DE;
 
+$header-child
+  display: inline-block;
+  vertical-align: top;
+
 #rainbow
-  position: absolute;
+  @extend $header-child;
+  display: inline-block;
+  position: relative;
   top: -1.5em;
-  left: -2em;
+  left: -1.5em; 
 
 h1
-  margin-left: 50%;
+  @extend $header-child;
   color: #6680c2;
   font-family: 'Londrina Solid';
   font-size: 9rem;
@@ -28,16 +34,13 @@ header
   overflow: hidden;
   background: whitesmoke;
   height: header-height;
-  h1
-  span
-    display: inline-block;
 
 .clouds
   position: relative;
   overflow: hidden;
   height: 100rem;
 
-for cloud, i in clouds
+for cloud, i in clouds asdjknasdfjks asdf
   .cloud:nth-child({i + 1})
     position: absolute;
     top: cloud.y;
@@ -46,3 +49,5 @@ for cloud, i in clouds
     width: cloud.size;
     height: cloud.size;
     background: whitesmoke;
+
+    asdfasd
