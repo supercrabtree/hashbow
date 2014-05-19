@@ -32,7 +32,7 @@ function stylusErr(err) {
   var line = splitErr[2];
   var location = splitErr[3];
   var theErr = splitErr[4];
-
+  
   console.log('\n', gutil.colors.cyan(file) + gutil.colors.red(line));
   console.log(location); 
   console.log(gutil.colors.red(theErr));

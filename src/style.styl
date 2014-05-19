@@ -1,7 +1,13 @@
-clouds = {size: 4em,  x: -1em,   y: -2em},
-         {size: 15em, x: -1em,   y: -13em},
-         {size: 15em, x: 8em,    y: -11em},
-         {size: 6em,  x: 20.5em, y: -3em}
+clouds = {size: 4rem,  x: 3.2rem,   y: -2rem},
+         {size: 10rem, x: 5.2rem,   y: -7.6rem},
+         {size: 3rem,  x: 12.7rem,  y: 0rem},
+         {size: 15rem, x: 13.1rem,  y: -11rem},
+         {size: 6rem,  x: 26.2rem,  y: -3rem},
+         {size: 6rem,  x: 31.8rem,  y: -3rem},
+         {size: 3rem,  x: 37.1rem,  y: -1rem},
+         {size: 6rem,  x: 38.2rem,  y: -5rem}
+
+split = 710px;
 
 header-height = 20rem;
 
@@ -17,30 +23,36 @@ $header-child
   display: inline-block;
   vertical-align: top;
 
+header
+  overflow: hidden;
+  height: header-height;
+  background: whitesmoke;
+  text-align: center;
+
 #rainbow
   @extend $header-child;
   display: inline-block;
   position: relative;
-  top: -1.5em;
-  left: -1.5em; 
+  top: -1.5rem;
+  left: -5rem; 
 
 h1
   @extend $header-child;
   color: #6680c2;
   font-family: 'Londrina Solid';
   font-size: 9rem;
+  margin-left: -7rem;
 
-header
-  overflow: hidden;
-  background: whitesmoke;
-  height: header-height;
+.cloud-container
+  margin-left: -82rem;
 
 .clouds
   position: relative;
   overflow: hidden;
   height: 100rem;
+  margin-left: 50%;
 
-for cloud, i in clouds asdjknasdfjks asdf
+for cloud, i in clouds
   .cloud:nth-child({i + 1})
     position: absolute;
     top: cloud.y;
@@ -49,5 +61,3 @@ for cloud, i in clouds asdjknasdfjks asdf
     width: cloud.size;
     height: cloud.size;
     background: whitesmoke;
-
-    asdfasd
