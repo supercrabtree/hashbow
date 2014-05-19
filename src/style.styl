@@ -8,8 +8,7 @@ clouds = {size: 4rem,  x: 3.2rem,   y: -2rem},
          {size: 6rem,  x: 38.2rem,  y: -5rem}
 
 split = 710px;
-
-header-height = 20rem;
+split-tiny = 710px;
 
 *
   box-sizing: border-box;
@@ -19,32 +18,45 @@ body
   font-size: 10px;
   background-color: #BDD1DE;
 
-$header-child
-  display: inline-block;
-  vertical-align: top;
-
 header
   overflow: hidden;
-  height: header-height;
+  height: 20rem;
   background: whitesmoke;
   text-align: center;
+  @media (max-width: split)
+    height: 26rem;
+
+$header-child
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
 
 #rainbow
   @extend $header-child;
   display: inline-block;
   position: relative;
   top: -1.5rem;
-  left: -5rem; 
+  left: -6.8rem;
+  z-index: 9000;
+  @media (max-width: split)
+    width: 9rem;
 
 h1
   @extend $header-child;
   color: #6680c2;
   font-family: 'Londrina Solid';
-  font-size: 9rem;
+  font-size: 7.9rem;
+  margin-top: 7rem;
   margin-left: -7rem;
+  z-index: 10000;
+  @media (max-width: split)
+    margin-left: -9.3rem;
+    margin-top: 16rem;
 
 .cloud-container
   margin-left: -82rem;
+  @media (max-width: split)
+    margin-left: -48rem;
 
 .clouds
   position: relative;
