@@ -1,5 +1,4 @@
-hashbow
-=======
+![hashbow](https://raw.githubusercontent.com/supercrabtree/hashbow/master/media/hashbow-header.jpg)
 
 Creates hashes simliar to md5 or sha1 but instead of outputting,  
 
