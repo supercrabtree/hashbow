@@ -1,7 +1,7 @@
 {
   "name": "hashbow",
   "version": "0.0.0",
-  "description": "Creates colorful hexadecimal hash values from strings / objects / arrays / anythings",
+  "description": "Hexadecimal hashes of everything",
   "main": "index.js",
   "scripts": {
     "test": "mocha test.js",
@@ -13,10 +13,12 @@
   },
   "keywords": [
     "color",
+    "colors",
+    "convert",
     "hash",
-    "rainbow",
-    "crypto",
-    "hex"
+    "hex",
+    "hexadecimal",
+    "rainbow"
   ],
   "author": "George Crabtree",
   "license": "MIT",
