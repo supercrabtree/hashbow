@@ -4,7 +4,8 @@
   "description": "Hexadecimal hashes of everything",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test.js"
+    "test": "mocha test.js",
+    "test-watch": "mocha -w test.js"
   },
   "repository": {
     "type": "git",
