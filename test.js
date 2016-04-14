@@ -1,10 +1,10 @@
-var expect = require('chai').expect
-  , hashbow = require('../index.js');
+var expect = require('chai').expect;
+var hashbow = require('./index.js');
 
 
 var person = {
   name: 'Randy Smasher',
-  job: 'Stripper',
+  job: 'Banana',
   banana: true
 };
 
