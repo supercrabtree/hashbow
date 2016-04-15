@@ -74,8 +74,11 @@ test('Undefined returns a hexadecimal string', t => {
  * Tests for specific hexadecimal colors
  */
 
-test('Booleans', t => {
-  t.is('#FF0000', hashbow(false), 'false boolean is red');
-  t.is('#00FF00', hashbow(true), 'true boolean is green');
+test('False boolean is red', t => {
+  t.is('#FF0000', hashbow(false));
+});
+
+test('True boolean is green ', t => {
+  t.is('#00FF00', hashbow(true));
 });
 
