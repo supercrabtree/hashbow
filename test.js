@@ -68,3 +68,14 @@ test('Undefined returns a hexadecimal string', t => {
   isValidHexColor(t)(undefined);
 });
 
+
+
+/**
+ * Tests for specific hexadecimal colors
+ */
+
+test('Booleans', t => {
+  t.is('#FF0000', hashbow(false), 'false boolean is red');
+  t.is('#00FF00', hashbow(true), 'true boolean is green');
+});
+
