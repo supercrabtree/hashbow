@@ -8,20 +8,20 @@ function hashbow(input, saturation, lightness) {
 
   if (input === null || input === undefined) return hslToHex(0, 0, lightness);
 
-  switch (typeof input) {
-    case 'object':
+  switch (input.constructor) {
+    case Object:
       toColor = JSON.stringify(input);
     break;
-    case 'number':
+    case Number:
       sum = input;
     break;
-    case 'boolean':
+    case Boolean:
       return hslToHex(input ? 120 : 0, saturation, lightness);
     break;
-    case 'function':
+    case Function:
       toColor = input.toString();
     break;
-    case 'string':
+    case String:
     default:
       toColor = input;
   }
