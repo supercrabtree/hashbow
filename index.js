@@ -1,9 +1,10 @@
 var hslToHex = require('tie-dye/hslToHex');
 
 function hashbow(input, saturation, lightness) {
-  var toColor, sum;
 
   var toColor, sum;
+  saturation = saturation || 100;
+  lightness = lightness || 50;
 
   switch (typeof input) {
     case 'object':
@@ -13,7 +14,7 @@ function hashbow(input, saturation, lightness) {
       sum = input;
     break;
     case 'boolean':
-      return hslToHex(input ? 120 : 0, saturation || 100, lightness || 50);
+      return hslToHex(input ? 120 : 0, saturation, lightness);
     break;
     case 'function':
       toColor = input.toString();
@@ -32,8 +33,7 @@ function hashbow(input, saturation, lightness) {
 
   sum = Math.abs(sum * sum);
 
-  var color = hslToHex(sum % 360, saturation || 100, lightness || 50);
-  return color;
+  return hslToHex(sum % 360, saturation, lightness);
 }
 
 module.exports = hashbow;
