@@ -51,3 +51,8 @@ test('Functions return hexadecimal strings', t => {
 test('Null returns a hexadecimal string', t => {
   isValidHexColor(t)(null);
 });
+
+test('Undefined returns a hexadecimal string', t => {
+  isValidHexColor(t)(undefined);
+});
+
