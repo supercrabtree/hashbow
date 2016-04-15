@@ -3,7 +3,7 @@ var hslToHex = require('tie-dye/hslToHex');
 function hashbow(input, saturation, lightness) {
   var toColor, sum;
 
-  if (!!input || input === 0) return hslToHex(0, saturation || 100, lightness || 50);
+  var toColor, sum;
 
   switch (typeof input) {
     case 'object':
@@ -22,7 +22,8 @@ function hashbow(input, saturation, lightness) {
     default:
       toColor = input;
   }
-  if (!sum) {
+
+  if (sum === null) {
     sum = 0;
     toColor.split('').forEach(function (letter) {
       sum += letter.charCodeAt(0);
