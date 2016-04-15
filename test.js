@@ -1,6 +1,12 @@
 import test from 'ava';
 import hashbow from './';
 
+
+
+/**
+ * Dummy values for tests
+ */
+
 const person = {
   name: 'Randy Smasher',
   job: 'Banana',
@@ -10,6 +16,12 @@ const person = {
 function personFunction() {
   return person;
 }
+
+
+
+/**
+ * Check all types return valid hexadecimal strings i.e. '#000000'
+ */
 
 function isValidHexColor(t) {
   return item => {
