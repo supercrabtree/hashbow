@@ -6,6 +6,8 @@ function hashbow(input, saturation, lightness) {
   saturation = saturation || 100;
   lightness = lightness || 50;
 
+  if (input === null || input === undefined) return hslToHex(0, 0, lightness);
+
   switch (typeof input) {
     case 'object':
       toColor = JSON.stringify(input);
