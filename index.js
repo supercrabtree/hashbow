@@ -22,6 +22,9 @@ function hashbow(input, saturation, lightness) {
     case Function:
       toColor = input.toString();
     break;
+    case RegExp:
+      toColor = input.toString();
+    break;
     case String:
     default:
       toColor = input;
