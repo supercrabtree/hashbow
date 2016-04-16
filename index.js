@@ -10,6 +10,7 @@ function hashbow(input, saturation, lightness) {
 
   switch (input.constructor) {
     case Object:
+    case Array:
       toColor = JSON.stringify(input);
     break;
     case Number:
