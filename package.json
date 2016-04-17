@@ -7,6 +7,9 @@
     "test": "ava",
     "test-watch": "ava --watch --fail-fast"
   },
+  "bin": {
+    "hashbow": "cli.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/supercrabtree/hashbow.git"
@@ -30,6 +33,7 @@
     "ava": "0.14.0"
   },
   "dependencies": {
+    "meow": "3.7.0",
     "tie-dye": "1.0.3"
   }
 }
