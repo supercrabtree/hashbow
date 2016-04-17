@@ -6,7 +6,11 @@ function hashbow(input, saturation, lightness) {
   saturation = saturation || 100;
   lightness = lightness || 50;
 
-  if (input === null || input === undefined) return hslToHex(0, 0, lightness);
+  var greyValues = [null, undefined, [], {}, '', new RegExp()];
+
+  if (greyValues.indexOf(input) != -1) {
+    return hslToHex(0, 0, lightness);
+  }
 
   switch (input.constructor) {
     case Function:
