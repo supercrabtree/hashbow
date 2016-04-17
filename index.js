@@ -2,7 +2,7 @@ var hslToHex = require('tie-dye/hslToHex');
 
 function hashbow(input, saturation, lightness) {
 
-  var toColor, sum;
+  var inputAsString, sum;
   saturation = saturation || 100;
   lightness = lightness || 50;
 
@@ -11,11 +11,11 @@ function hashbow(input, saturation, lightness) {
   switch (input.constructor) {
     case Function:
     case RegExp:
-      toColor = input.toString();
+      inputAsString = input.toString();
     break;
     case Object:
     case Array:
-      toColor = JSON.stringify(input);
+      inputAsString = JSON.stringify(input);
     break;
     case Number:
       sum = input;
@@ -25,12 +25,12 @@ function hashbow(input, saturation, lightness) {
     break;
     case String:
     default:
-      toColor = input;
+      inputAsString = input;
   }
 
   if (sum === undefined) {
     sum = 0;
-    toColor.split('').forEach(function (letter) {
+    inputAsString.split('').forEach(function (letter) {
       sum += letter.charCodeAt(0);
     });
   }
