@@ -30,7 +30,7 @@ function hashbow(input, saturation, lightness) {
       toColor = input;
   }
 
-  if (sum === null) {
+  if (sum === undefined) {
     sum = 0;
     toColor.split('').forEach(function (letter) {
       sum += letter.charCodeAt(0);
