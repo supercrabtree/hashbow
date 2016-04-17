@@ -82,3 +82,8 @@ test('True boolean is green ', t => {
   t.is('#00FF00', hashbow(true));
 });
 
+test('RegExps constructed with different params should be different', t => {
+  const hash = hashbow(new RegExp());
+  const hash2 = hashbow(new RegExp(/hello/g));
+  t.not(hash, hash2);
+});
