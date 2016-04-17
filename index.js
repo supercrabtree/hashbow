@@ -9,6 +9,10 @@ function hashbow(input, saturation, lightness) {
   if (input === null || input === undefined) return hslToHex(0, 0, lightness);
 
   switch (input.constructor) {
+    case Function:
+    case RegExp:
+      toColor = input.toString();
+    break;
     case Object:
     case Array:
       toColor = JSON.stringify(input);
@@ -18,12 +22,6 @@ function hashbow(input, saturation, lightness) {
     break;
     case Boolean:
       return hslToHex(input ? 120 : 0, saturation, lightness);
-    break;
-    case Function:
-      toColor = input.toString();
-    break;
-    case RegExp:
-      toColor = input.toString();
     break;
     case String:
     default:
