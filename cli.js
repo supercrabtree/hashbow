@@ -22,6 +22,10 @@ const cli = meow(`
   }
 });
 
-const res = hashbow(cli.input[0], cli.flags.saturation, cli.flags.lightness);
 
-process.stdout.write(res);
+if (cli.input[0] === undefined) {
+  process.exit(1);
+} else {
+  const res = hashbow(cli.input[0], cli.flags.saturation, cli.flags.lightness);
+  process.stdout.write(res);
+}
