@@ -14,7 +14,7 @@ const cli = meow(`
       -l, --lightness   Change the lightness of the output hex
 
     Examples
-      $ hashbow 'Hi Mum!' => #FF6A00
+      $ hashbow 'Hi Mum!' => #BF7540
 `, {
   alias: {
     s: 'saturation',
