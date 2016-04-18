@@ -75,11 +75,11 @@ test('Undefined returns a hexadecimal string', t => {
  */
 
 test('False boolean is red', t => {
-  t.is('#FF0000', hashbow(false));
+  t.is('#BF4040', hashbow(false));
 });
 
 test('True boolean is green ', t => {
-  t.is('#00FF00', hashbow(true));
+  t.is('#40BF40', hashbow(true));
 });
 
 test('RegExps constructed with different params should be different', t => {

@@ -3,7 +3,7 @@ var hslToHex = require('tie-dye/hslToHex');
 function hashbow(input, saturation, lightness) {
 
   var inputAsString, sum;
-  saturation = saturation || 100;
+  saturation = saturation || 50;
   lightness = lightness || 50;
 
   var greyValues = [null, undefined, [], {}, '', new RegExp()];
