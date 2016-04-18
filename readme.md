@@ -1,29 +1,60 @@
 ![hashbow](https://raw.githubusercontent.com/supercrabtree/hashbow/master/media/hashbow-header.jpg)
 
-Creates hashes simliar to md5 or sha1 but instead of outputting,  
+Hashbow creates hexadecimal colors of everything. You can think of it like a crypto library, but instead of outputting md5s or sha1s it turns everything into color hashes.
 
-> 3cc36ef3d5e79c2c9c3dfc5e4a51e279
-or
-> 08483f4b794f6db97200403646be4e14f67bca38
+`hashbow('Bruce Willis')`
 
-it gives you colorful hex values like this,
+Outputs `#40BFA8`, a lovely mid turquiose blue.
 
-<blockquote>#ff9000</blockquote>
-<blockquote>#00eeff</blockquote>
-<blockquote>#0022ef</blockquote>
+Whereas
 
-Hashbow will create color hashes of everything, Strings, Objects, Functions, Numbers, null, Booleans, RegExps and Arrays.
+`hashbow('Nicolas Cage')`
 
-It uses manipulates the hue in HSL (you can pass it saturation and lightness) to make sure that your colors are strong and not washed out muddy browns and greys.
+Outputs a `#BFA840`, a Dijon Mustard kind of color.
 
-The color calculation involves no random, so the outputted hex is always the same for whatever you put in. Very useful for assigning your users a color, or brightening up a comment area.
+##### But whats the point?
 
-### Installation
-Its on bower and npm
+Hashbow's color conversion is consistent, so every time you call `hashbow('Bruce Willis')` you will get the same lovely mid turquoise blue. This is very useful for assigning your users a color, brightening up a comment area, etc.
 
-`bower install hashbow`  
+Hashbow uses the HSL colorspace to make it easy to get colors that work well together. The first parameter is used to calculate the hue of the result. You can also pass in custom saturation and lightness if you need to tweak (default is 50).
+
+`hashbow('Bruce Willis', 30);
+
+Outputs `#669990`, a calmer seafoam green.
+
+You could use this to make all results greyscale.
+
+`hashbow('Bruce Willis', 0);`
+
+Outputs `#7E8180`
+
+Hashbow will create color hashes of anything and everything, Strings, Objects, Functions, Numbers, null, undefined, Booleans, RegExps and Arrays.
+
+
+### Installation 
 `npm install hashbow`
 
-or there is a minified version in the build folder if you're old skool
+### Usage
+`hashbow(object, saturation, lightness)`
 
-[MIT Licence](http://opensource.org/licenses/MIT)
+### Example
+```
+const hashbow = require('hashbow');
+const actors = ['Bruce Willis', 'Nicolas Cage', 'Leonardo Di Caprio'];
+
+actors.forEach(actor => {
+  const el = document.createElement('div');
+  el.innerHTML = actor;
+  el.style.color = hashbow(actor);
+  document.appendChild(el);
+});
+```
+
+### CLI
+You can use the CLI by installing globally
+
+`npm install hashbow --global`
+
+and then
+
+`hashbow 'Bruce Willis'`
