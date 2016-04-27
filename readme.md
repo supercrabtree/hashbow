@@ -71,6 +71,14 @@ and then
 
 `hashbow boogers`
 
-then color up your git logs, or like, something else that's cool
+Outputs `#BF5340`
+
+You can use `-s` and `-l` to modify saturation and lightness too.
+
+`hashbow boogers -s 50 -l 22`
+
+Outputs `#54241C`
+
+now you can color up your git logs, or like, something else that's cool
 
 🙂️
