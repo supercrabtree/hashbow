@@ -20,7 +20,7 @@ outputs a `#BFA840`, a Dijon Mustard kind of color.
 
 Hashbow's color conversion is consistent, so every time you call `hashbow('Bruce Willis')` you will get the same lovely mid turquoise blue. This is very useful for assigning your users a color, brightening up a comment area, etc.
 
-Hashbow uses the HSL colorspace to make it easy to get colors that work well together. The first parameter is used to calculate the hue of the result. You can also pass in custom saturation and lightness if you need to tweak (default is 50).
+Hashbow uses the [HSL colorspace](http://hslpicker.com/) to make it easy to get colors that work well together. The first parameter is used to calculate the hue of the result. You can also pass in custom saturation and lightness if you need to tweak (default is 50).
 
 `hashbow('Bruce Willis', 30);`
 
