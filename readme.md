@@ -4,13 +4,13 @@ Hashbow creates hexadecimal colors of everything. You can think of it like a cry
 
 `hashbow('Bruce Willis')`
 
-Outputs `#40BFA8`, a lovely mid turquiose blue.
+outputs `#40BFA8`, a lovely mid turquiose blue.
 
-Whereas
+whereas
 
 `hashbow('Nicolas Cage')`
 
-Outputs a `#BFA840`, a Dijon Mustard kind of color.
+outputs a `#BFA840`, a Dijon Mustard kind of color.
 
 ##### But whats the point?
 
@@ -18,7 +18,7 @@ Hashbow's color conversion is consistent, so every time you call `hashbow('Bruce
 
 Hashbow uses the HSL colorspace to make it easy to get colors that work well together. The first parameter is used to calculate the hue of the result. You can also pass in custom saturation and lightness if you need to tweak (default is 50).
 
-`hashbow('Bruce Willis', 30);
+`hashbow('Bruce Willis', 30);`
 
 Outputs `#669990`, a calmer seafoam green.
 
@@ -31,7 +31,7 @@ Outputs `#7E8180`
 Hashbow will create color hashes of anything and everything, Strings, Objects, Functions, Numbers, null, undefined, Booleans, RegExps and Arrays.
 
 
-### Installation 
+### Installation
 `npm install hashbow`
 
 ### Usage
@@ -43,15 +43,19 @@ const hashbow = require('hashbow');
 const actors = ['Bruce Willis', 'Nicolas Cage', 'Leonardo Di Caprio'];
 
 actors.forEach(actor => {
+
   const el = document.createElement('div');
+
   el.innerHTML = actor;
   el.style.color = hashbow(actor);
-  document.appendChild(el);
+
+  document.body.appendChild(el);
+
 });
 ```
 
 ### CLI
-You can use the CLI by installing globally
+There is a CLI just install globally
 
 `npm install hashbow --global`
 
