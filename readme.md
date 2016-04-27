@@ -6,11 +6,15 @@ Hashbow creates hexadecimal colors of everything. You can think of it like a cry
 
 outputs `#40BFA8`, a lovely mid turquiose blue.
 
+![](https://raw.githubusercontent.com/supercrabtree/hashbow/master/media/mid-turquiose-blue.svg)
+
 whereas
 
 `hashbow('Nicolas Cage')`
 
 outputs a `#BFA840`, a Dijon Mustard kind of color.
+
+![](https://raw.githubusercontent.com/supercrabtree/hashbow/master/media/dijon-mustard-yellow.svg)
 
 ##### But whats the point?
 
@@ -22,20 +26,24 @@ Hashbow uses the HSL colorspace to make it easy to get colors that work well tog
 
 Outputs `#669990`, a calmer seafoam green.
 
-You could use this to make all results greyscale.
+![](https://raw.githubusercontent.com/supercrabtree/hashbow/master/media/calm-seafoam-green.svg)
+
+Setting the saturation to 0 will make everything greyscale.
 
 `hashbow('Bruce Willis', 0);`
 
 Outputs `#7E8180`
 
-Hashbow will create color hashes of anything and everything, Strings, Objects, Functions, Numbers, null, undefined, Booleans, RegExps and Arrays.
+![](https://raw.githubusercontent.com/supercrabtree/hashbow/master/media/grey-willis.svg)
+
+Hashbow will create color hashes of anything and everything, Strings, Objects, Functions, Numbers, whatever, etc.
 
 
 ### Installation
 `npm install hashbow`
 
 ### Usage
-`hashbow(object, saturation, lightness)`
+`hashbow(thingyToHash, saturation, lightness)`
 
 ### Example
 ```
@@ -48,17 +56,21 @@ actors.forEach(actor => {
 
   el.innerHTML = actor;
   el.style.color = hashbow(actor);
-
+  
   document.body.appendChild(el);
 
 });
 ```
 
 ### CLI
-There is a CLI just install globally
+There is a CLI, just install globally
 
 `npm install hashbow --global`
 
 and then
 
 `hashbow 'Bruce Willis'`
+
+then color up your git logs, or like, something else that's cool
+
+🙂️
