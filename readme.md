@@ -69,7 +69,7 @@ There is a CLI, just install globally
 
 and then
 
-`hashbow 'Bruce Willis'`
+`hashbow boogers`
 
 then color up your git logs, or like, something else that's cool
 
