@@ -1,6 +1,6 @@
 {
   "name": "hashbow",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Hexadecimal hashes of everything",
   "main": "index.js",
   "scripts": {
