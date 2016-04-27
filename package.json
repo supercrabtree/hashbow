@@ -11,7 +11,8 @@
     "hashbow": "cli.js"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "cli.js"
   ],
   "repository": {
     "type": "git",
