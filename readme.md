@@ -68,7 +68,8 @@ actors.forEach(actor => {
 
   document.body.appendChild(el);
 
-}); ```
+});
+```
 
 ### CLI There is a CLI, just install globally
 
@@ -88,4 +89,4 @@ Outputs `#54241C`
 
 now you can color up your git logs, or like, something else that's cool
 
-🙂️
+### 🙂️
