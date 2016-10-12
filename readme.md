@@ -8,7 +8,7 @@ into color hashes.
 
 outputs `#40BFA8`, a lovely mid turquiose blue.
 
-![](https://raw.githubusercontent.com/supercrabtree/hashbow/master/media/mid-turquiose-blue.svg)
+![](http://supercrabtree.github.io/media/mid-turquiose-blue.svg)
 
 whereas
 
@@ -16,7 +16,7 @@ whereas
 
 outputs a `#BFA840`, a Dijon Mustard kind of color.
 
-![](https://raw.githubusercontent.com/supercrabtree/hashbow/master/media/dijon-mustard-yellow.svg)
+![](http://supercrabtree.github.io/media/dijon-mustard-yellow.svg)
 
 ##### But whats the point?
 
@@ -34,7 +34,7 @@ need to tweak (default is 50).
 
 Outputs `#669990`, a calmer seafoam green.
 
-![](https://raw.githubusercontent.com/supercrabtree/hashbow/master/media/calm-seafoam-green.svg)
+![](http://supercrabtree.github.io/media/calm-seafoam-green.svg)
 
 Setting the saturation to 0 will make everything greyscale.
 
@@ -42,7 +42,7 @@ Setting the saturation to 0 will make everything greyscale.
 
 Outputs `#7E8180`
 
-![](https://raw.githubusercontent.com/supercrabtree/hashbow/master/media/grey-willis.svg)
+![](http://supercrabtree.github.io/media/grey-willis.svg)
 
 Hashbow will create color hashes of anything and everything, Strings, Objects,
 Functions, Numbers, whatever, etc.
