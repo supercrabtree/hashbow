@@ -34,7 +34,7 @@
   },
   "homepage": "https://github.com/supercrabtree/hashbow",
   "devDependencies": {
-    "ava": "0.15.2"
+    "ava": "0.17.0"
   },
   "dependencies": {
     "meow": "3.7.0",
